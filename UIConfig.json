@@ -1,0 +1,75 @@
+{
+  "page": {
+    "label": "TRANSLATE.PLUGIN_CONFIGURATION"
+  },
+  "sections": [
+    {
+      "id": "section_settings",
+      "element": "section",
+      "label": "TRANSLATE.SETTINGS",
+      "icon": "fa-cog",
+      "onSave": {
+        "type": "controller",
+        "endpoint": "music_service/sverigesradio",
+        "method": "saveSettings"
+      },
+      "saveButton": {
+        "label": "TRANSLATE.SAVE",
+        "data": [
+          "audio_quality",
+          "page_size",
+          "detect_series",
+          "continue_series"
+        ]
+      },
+      "content": [
+        {
+          "id": "audio_quality",
+          "element": "select",
+          "doc": "TRANSLATE.AUDIO_QUALITY_DOC",
+          "label": "TRANSLATE.AUDIO_QUALITY",
+          "value": {
+            "value": "hi",
+            "label": "TRANSLATE.QUALITY_HI"
+          },
+          "options": [
+            {
+              "value": "hi",
+              "label": "TRANSLATE.QUALITY_HI"
+            },
+            {
+              "value": "normal",
+              "label": "TRANSLATE.QUALITY_NORMAL"
+            },
+            {
+              "value": "lo",
+              "label": "TRANSLATE.QUALITY_LO"
+            }
+          ]
+        },
+        {
+          "id": "page_size",
+          "element": "input",
+          "type": "number",
+          "doc": "TRANSLATE.PAGE_SIZE_DOC",
+          "label": "TRANSLATE.PAGE_SIZE",
+          "value": 50
+        },
+        {
+          "id": "detect_series",
+          "element": "switch",
+          "doc": "TRANSLATE.DETECT_SERIES_DOC",
+          "label": "TRANSLATE.DETECT_SERIES",
+          "value": true
+        },
+        {
+          "id": "continue_series",
+          "element": "switch",
+          "doc": "TRANSLATE.CONTINUE_SERIES_DOC",
+          "label": "TRANSLATE.CONTINUE_SERIES",
+          "value": true
+        }
+      ]
+    }
+  ]
+}

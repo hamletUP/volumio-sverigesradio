@@ -1,0 +1,46 @@
+{
+  "name": "sverigesradio",
+  "version": "0.1.0",
+  "description": "Browse and play Sveriges Radio live channels and the program/podcast archive in Volumio",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/smoke.js",
+    "package": "sh scripts/package.sh",
+    "bookworm": "node scripts/bookworm.js"
+  },
+  "author": "Hamlet",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hamletUP/volumio-sverigesradio.git"
+  },
+  "homepage": "https://github.com/hamletUP/volumio-sverigesradio#readme",
+  "bugs": {
+    "url": "https://github.com/hamletUP/volumio-sverigesradio/issues"
+  },
+  "volumio_info": {
+    "prettyName": "Sveriges Radio",
+    "icon": "fa-podcast",
+    "plugin_type": "music_service",
+    "details": "Unofficial plugin. Listen to Sveriges Radio live channels, and browse the program and podcast archive by category, channel or name. Series play in order, and channels, programs, series and episodes can be saved as favourites. Uses the Sveriges Radio Open API.",
+    "changelog": "Initial release",
+    "architectures": [
+      "armhf",
+      "amd64",
+      "i386",
+      "arm64"
+    ],
+    "os": [
+      "buster",
+      "bookworm"
+    ]
+  },
+  "engines": {
+    "node": ">=14",
+    "volumio": ">=3"
+  },
+  "dependencies": {
+    "kew": "^0.7.0",
+    "v-conf": "^1.4.3"
+  }
+}

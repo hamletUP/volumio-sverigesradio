@@ -1,0 +1,22 @@
+{
+  "audio_quality": {
+    "type": "string",
+    "value": "hi"
+  },
+  "page_size": {
+    "type": "number",
+    "value": 50
+  },
+  "detect_series": {
+    "type": "boolean",
+    "value": true
+  },
+  "continue_series": {
+    "type": "boolean",
+    "value": true
+  },
+  "favorites": {
+    "type": "string",
+    "value": "[]"
+  }
+}
