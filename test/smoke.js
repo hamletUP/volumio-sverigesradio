@@ -171,9 +171,9 @@ let c;
   const groupEpisodes = group.navigation.lists[0].items; // intro, Del 1..6
   const del = (n) => groupEpisodes[n];
   sm.playQueue.arrayQueue = [
-    ep(111, 'Något annat'),
+    ep(111, 'Something else'),
     { service: 'sverigesradio', uri: del(3).uri, title: del(3).title },
-    ep(222, 'Annan sökträff'),
+    ep(222, 'Other search hit'),
     { service: 'sverigesradio', uri: del(1).uri, title: del(1).title },
     { service: 'webradio', uri: 'http://example/stream', title: 'Webradio' }
   ];
@@ -184,8 +184,8 @@ let c;
   const titles = sm.playQueue.arrayQueue.map((q) => q.title);
   console.log('queue after starting Del 3 from search:');
   titles.forEach((t, i) => console.log('  ' + i + (i === sm.currentPosition ? ' ▶ ' : '   ') + t));
-  assert.deepStrictEqual(titles.slice(0, 5).map((t) => (/Del (\d)/.exec(t) || [, t])[1]), ['Något annat', '3', '4', '5', '6']);
-  assert.deepStrictEqual(titles.slice(5), ['Annan sökträff', 'Webradio']);
+  assert.deepStrictEqual(titles.slice(0, 5).map((t) => (/Del (\d)/.exec(t) || [, t])[1]), ['Something else', '3', '4', '5', '6']);
+  assert.deepStrictEqual(titles.slice(5), ['Other search hit', 'Webradio']);
 
   // Idempotent: already arranged → no change
   assert.strictEqual(c.arrangeQueueForSeries(del(3).uri, [], new Set()), false);

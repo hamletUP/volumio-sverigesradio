@@ -23,7 +23,7 @@
     "icon": "fa-podcast",
     "plugin_type": "music_service",
     "details": "Unofficial plugin. Listen to Sveriges Radio live channels, and browse the program and podcast archive by category, channel or name. Series play in order, and channels, programs, series and episodes can be saved as favourites. Uses the Sveriges Radio Open API.",
-    "changelog": "Initial release",
+    "changelog": "First release: live channels, program and podcast archive, series in order, favourites",
     "architectures": [
       "armhf",
       "amd64",
